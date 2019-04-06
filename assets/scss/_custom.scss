@@ -1,29 +1,83 @@
-body{
-   // background-color: $primary;
-}
-
-p{
-    //color: var(--bonta);
-}
-
-
-.first-letter-big{
-    overflow: visible;
-    margin-right: .3em;
-    width: auto;
-    float: left;
-    font-size: 3em;
-    
-    height: 1em;
-    line-height: 1;
-}
-
-.div-1{
-    &::first-letter{
-        @extend .first-letter-big;
+button {
+    &:hover {
+        cursor: pointer;
     }
 }
 
-.ws{
-   // white-space: nowrap;
+a {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.contact-info {
+    min-height: $navbar-height;
+    background-color: $navbar-contact-bg;
+
+    .container {
+        padding: 0;
+    }
+
+    .navbar-nav {
+        +.navbar-nav {
+            text-transform: capitalize;
+        }
+    }
+
+    .nav-link {
+        padding-top: 0.4rem;
+        padding-bottom: 0.4rem;
+    }
+
+    .navbar-brand {
+        padding: 0 10px;
+
+        img {
+            height: 30px;
+        }
+    }
+}
+
+.offcanvas-collapse {
+    border-top: 1px solid rgba(#fff, .1);
+
+    .icon {
+        margin-right: 3px;
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .navbar-expand-md {
+        .navbar-nav .nav-link {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+}
+
+.icon {
+    font-size: 1rem;
+    position: relative;
+    top: 0.2rem;
+}
+
+.accessibiles {
+    display: flex;
+    padding: 10px 0;
+
+    a {
+        color: rgba(#000, 0.8);
+
+        &:nth-child(1) {
+            font-size: 14px;
+        }
+
+        &:nth-child(3) {
+            margin-right: 10px
+        }
+
+        +a {
+            margin-left: 24px;
+        }
+    }
 }
