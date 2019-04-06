@@ -1,0 +1,29 @@
+body{
+   // background-color: $primary;
+}
+
+p{
+    //color: var(--bonta);
+}
+
+
+.first-letter-big{
+    overflow: visible;
+    margin-right: .3em;
+    width: auto;
+    float: left;
+    font-size: 3em;
+    
+    height: 1em;
+    line-height: 1;
+}
+
+.div-1{
+    &::first-letter{
+        @extend .first-letter-big;
+    }
+}
+
+.ws{
+   // white-space: nowrap;
+}
