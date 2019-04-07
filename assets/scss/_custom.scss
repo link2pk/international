@@ -160,6 +160,7 @@ a {
     min-height: 300px;
     background: url(../img/banner-mobile.jpg) center bottom no-repeat;
     background-size: cover;
+    overflow: hidden;
 
     @include media-breakpoint-up(lg) {
         background-image: url(../img/banner@2x.jpg);
@@ -167,14 +168,16 @@ a {
     }
 
     @include media-breakpoint-up(xl) {
-
         min-height: 500px;
     }
 
     @include media-breakpoint-up(xxl) {
-
         min-height: 594px;
     }
+}
 
-
+.bag {
+    left: 100%;
+    top: 0;
+    position: absolute;
 }

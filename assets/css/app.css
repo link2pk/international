@@ -8865,7 +8865,8 @@ a:hover {
 .banner {
   min-height: 300px;
   background: url(../img/banner-mobile.jpg) center bottom no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
   @media (min-width: 992px) {
     .banner {
       background-image: url(../img/banner@2x.jpg);
@@ -8876,5 +8877,10 @@ a:hover {
   @media (min-width: 1660px) {
     .banner {
       min-height: 594px; } }
+
+.bag {
+  left: 100%;
+  top: 0;
+  position: absolute; }
 
 /*# sourceMappingURL=app.css.map */
