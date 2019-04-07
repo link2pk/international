@@ -15,9 +15,25 @@ Roboto,
 
 $navbar-contact-bg: #5f5f5f;
 $navbar-dark-color: #fff;
-$navbar-padding-y: 0;
-$navbar-padding-x: 0;
+/* $navbar-padding-y: 0;
+$navbar-padding-x: 0; */
 //$nav-link-padding-x: 6rem;
 //$nav-link-padding-y: 0.35rem;
 $navbar-height: 36px;
 $navbar-dark-toggler-border-color: transparent;
+
+$navbar-light-toggler-icon-bg: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#000' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+
+
+$grid-breakpoints: (xs: 0,
+sm: 576px,
+md: 768px,
+lg: 992px,
+xl: 1200px,
+xxl: 1660px);
+
+$container-max-widths: (sm: 540px,
+md: 720px,
+lg: 960px,
+xl: 1140px,
+xxl: 1560px);
