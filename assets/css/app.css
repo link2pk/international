@@ -9074,6 +9074,9 @@ a:hover {
   overflow: hidden; }
   .banner .container {
     position: relative; }
+  .banner img {
+    max-width: 200px;
+    position: absolute; }
   @media (min-width: 992px) {
     .banner {
       background-image: url(../img/banner@2x.jpg);
@@ -9084,12 +9087,35 @@ a:hover {
   @media (min-width: 1660px) {
     .banner {
       min-height: 594px; } }
+  .banner .keys {
+    max-width: 160px; }
 
-/* .bag {
-    position: absolute;
-    right: 10px;
-    width: 100%;
-} */
+.bag {
+  left: 300px; }
+
+.bottle {
+  top: 150px;
+  left: -60px; }
+
+.spects {
+  left: 100px;
+  top: 150px; }
+
+.book {
+  top: 100px;
+  left: 60px; }
+
+@media (min-width: 768px) {
+  .bag {
+    left: 600px; }
+  .spects {
+    left: 400px; }
+  .book {
+    left: 360px; }
+  .shirt {
+    top: 100px;
+    left: 190px; } }
+
 .featured {
   padding-bottom: 40px; }
   .featured h3 {
