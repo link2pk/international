@@ -125,6 +125,10 @@ a {
                 width: 300px;
             }
 
+            @include media-breakpoint-up(xl) {
+                width: 420px;
+            }
+
             @include media-breakpoint-up(xxl) {
                 width: 600px;
             }
@@ -150,4 +154,27 @@ a {
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 0, 0, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
     }
+}
+
+.banner {
+    min-height: 300px;
+    background: url(../img/banner-mobile.jpg) center bottom no-repeat;
+    background-size: cover;
+
+    @include media-breakpoint-up(lg) {
+        background-image: url(../img/banner@2x.jpg);
+        min-height: 400px;
+    }
+
+    @include media-breakpoint-up(xl) {
+
+        min-height: 500px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+
+        min-height: 594px;
+    }
+
+
 }
