@@ -6367,7 +6367,9 @@ button:hover {
   cursor: pointer; }
 
 a:hover {
-  text-decoration: none; }
+  text-decoration: none;
+  -webkit-transition: color .3s ease-in-out;
+  transition: color .3s ease-in-out; }
 
 .navbar-toggler:focus {
   outline: none; }
@@ -6463,6 +6465,8 @@ a:hover {
     @media (min-width: 1200px) {
       .main-nav .nav-link {
         font-size: 16px; } }
+    .main-nav .nav-link:hover {
+      color: #676767; }
   .main-nav .navbar-toggler {
     position: relative;
     top: -4px; }
@@ -6665,25 +6669,7 @@ a:hover {
 .products .slick-slide:focus {
   outline: none; }
 
-/* Shine */
-/* .view {
-    position: absolute;
-
-    display: block;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    margin: 0;
-    padding: 0 10px;
-    color: #444;
-    background: #fff;
-    font-size: 18px;
-    text-decoration: none;
-    text-align: center;
-    -webkit-transition: 0.3s ease-in-out;
-    transition: 0.3s ease-in-out;
-    opacity: 0;
-} */
+/* Shine effect*/
 .shine {
   position: relative;
   overflow: hidden;
