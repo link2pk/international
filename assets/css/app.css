@@ -9077,25 +9077,38 @@ a:hover {
   .banner img {
     max-width: 200px;
     position: absolute; }
+  .banner .keys {
+    max-width: 160px; }
   @media (min-width: 992px) {
     .banner {
       background-image: url(../img/banner@2x.jpg);
-      min-height: 400px; } }
+      min-height: 400px; }
+      .banner .shirt {
+        max-width: 300px; }
+      .banner .keys {
+        max-width: 200px; } }
   @media (min-width: 1200px) {
     .banner {
       min-height: 500px; } }
   @media (min-width: 1660px) {
     .banner {
       min-height: 594px; } }
-  .banner .keys {
-    max-width: 160px; }
+
+.keys,
+.spects {
+  -webkit-animation: wave 7.11111s 0.1s infinite linear;
+          animation: wave 7.11111s 0.1s infinite linear; }
 
 .bag {
   left: 300px; }
 
 .bottle {
   top: 150px;
-  left: -60px; }
+  left: -60px;
+  -webkit-animation: swing 10s infinite alternate cubic-bezier(0.155, 0.03, 0.115, 0.155);
+          animation: swing 10s infinite alternate cubic-bezier(0.155, 0.03, 0.115, 0.155);
+  -webkit-transform-origin: 50% 0%;
+          transform-origin: 50% 0%; }
 
 .spects {
   left: 100px;
@@ -9115,6 +9128,50 @@ a:hover {
   .shirt {
     top: 100px;
     left: 190px; } }
+
+@media (min-width: 992px) {
+  .bag {
+    left: 800px; }
+  .spects {
+    left: 560px; }
+  .book {
+    left: 500px; }
+  .shirt {
+    top: 120px; }
+  .bottle {
+    top: 250px; } }
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: rotateZ(0deg) translate3d(0, 5%, 0) rotateZ(0deg);
+            transform: rotateZ(0deg) translate3d(0, 5%, 0) rotateZ(0deg); }
+  100% {
+    -webkit-transform: rotateZ(360deg) translate3d(0, 5%, 0) rotateZ(-360deg);
+            transform: rotateZ(360deg) translate3d(0, 5%, 0) rotateZ(-360deg); } }
+
+@keyframes wave {
+  0% {
+    -webkit-transform: rotateZ(0deg) translate3d(0, 5%, 0) rotateZ(0deg);
+            transform: rotateZ(0deg) translate3d(0, 5%, 0) rotateZ(0deg); }
+  100% {
+    -webkit-transform: rotateZ(360deg) translate3d(0, 5%, 0) rotateZ(-360deg);
+            transform: rotateZ(360deg) translate3d(0, 5%, 0) rotateZ(-360deg); } }
+
+@-webkit-keyframes swing {
+  0% {
+    -webkit-transform: rotateZ(10deg);
+            transform: rotateZ(10deg); }
+  100% {
+    -webkit-transform: rotateZ(-10deg);
+            transform: rotateZ(-10deg); } }
+
+@keyframes swing {
+  0% {
+    -webkit-transform: rotateZ(10deg);
+            transform: rotateZ(10deg); }
+  100% {
+    -webkit-transform: rotateZ(-10deg);
+            transform: rotateZ(-10deg); } }
 
 .featured {
   padding-bottom: 40px; }

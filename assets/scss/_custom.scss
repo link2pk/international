@@ -177,9 +177,21 @@ a {
     position: absolute;
   }
 
+  .keys {
+    max-width: 160px;
+  }
+
   @include media-breakpoint-up(lg) {
     background-image: url(../img/banner@2x.jpg);
     min-height: 400px;
+
+    .shirt {
+      max-width: 300px;
+    }
+
+    .keys {
+      max-width: 200px;
+    }
   }
 
   @include media-breakpoint-up(xl) {
@@ -189,10 +201,11 @@ a {
   @include media-breakpoint-up(xxl) {
     min-height: 594px;
   }
+}
 
-  .keys {
-    max-width: 160px;
-  }
+.keys,
+.spects {
+  animation: wave 7.11111s 0.1s infinite linear;
 }
 
 .bag {
@@ -202,6 +215,9 @@ a {
 .bottle {
   top: 150px;
   left: -60px;
+  animation: swing 10s infinite alternate
+    cubic-bezier(0.155, 0.03, 0.115, 0.155);
+  transform-origin: 50% 0%;
 }
 
 .spects {
@@ -230,6 +246,50 @@ a {
   .shirt {
     top: 100px;
     left: 190px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .bag {
+    left: 800px;
+  }
+
+  .spects {
+    left: 560px;
+  }
+
+  .book {
+    left: 500px;
+  }
+
+  .shirt {
+    top: 120px;
+  }
+
+  .bottle {
+    top: 250px;
+  }
+}
+
+// parallax keyframes
+
+@keyframes wave {
+  0% {
+    transform: rotateZ(0deg) translate3d(0, 5%, 0) rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg) translate3d(0, 5%, 0) rotateZ(-360deg);
+  }
+}
+
+@keyframes swing {
+  0% {
+    transform: rotateZ(10deg);
+  }
+
+  100% {
+    transform: rotateZ(-10deg);
   }
 }
 
