@@ -6368,8 +6368,8 @@ button:hover {
 
 a:hover {
   text-decoration: none;
-  -webkit-transition: color .3s ease-in-out;
-  transition: color .3s ease-in-out; }
+  -webkit-transition: color 0.3s ease-in;
+  transition: color 0.3s ease-in; }
 
 .navbar-toggler:focus {
   outline: none; }
@@ -6419,6 +6419,17 @@ a:hover {
       margin-right: 10px; }
     .accessibiles a + a {
       margin-left: 24px; }
+
+.search-form-a {
+  position: relative; }
+
+.search-form {
+  position: absolute;
+  z-index: 100;
+  right: 20px;
+  top: -3px;
+  width: 130px;
+  display: none; }
 
 .cart {
   position: relative; }

@@ -1,9 +1,15 @@
 $(function() {
-  //alert($.fn.jquery)
+  //js to toggle offcanvas contacts menu
   $('[data-toggle="offcanvas"]').on("click", function() {
     $(".offcanvas-collapse").toggleClass("open");
   });
 
+  //js for search
+  $("#search").on("click", function() {
+    $("#search-form").toggle();
+  });
+
+  //js for freatured products slider
   $(".products").slick({
     speed: 300,
     slidesToShow: 1,
@@ -42,6 +48,7 @@ $(function() {
   });
 }); //End of document ready
 
+// to initiate banner parallax
 var scene = document.getElementById("scene");
 var parallaxInstance = new Parallax(scene, {
   relativeInput: true
