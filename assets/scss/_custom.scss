@@ -196,10 +196,32 @@ a {
 
   @include media-breakpoint-up(xl) {
     min-height: 500px;
+
+    img {
+      max-width: 300px;
+    }
+
+    .shirt {
+      max-width: 400px;
+    }
   }
 
   @include media-breakpoint-up(xxl) {
     min-height: 594px;
+
+    img {
+      max-width: 450px;
+    }
+
+    .keys,
+    .bottle {
+      max-width: 300px;
+    }
+
+    .shirt,
+    .spects {
+      max-width: 560px;
+    }
   }
 }
 
@@ -215,9 +237,11 @@ a {
 .bottle {
   top: 150px;
   left: -60px;
-  animation: swing 10s infinite alternate
-    cubic-bezier(0.155, 0.03, 0.115, 0.155);
-  transform-origin: 50% 0%;
+  //animation: swing 10s infinite alternate cubic-bezier(0.155, 0.03, 0.115, 0.155);
+  animation: lighthouse 4s 0.1s infinite alternate
+    cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
+  transform-origin: 50% 90%;
 }
 
 .spects {
@@ -267,7 +291,38 @@ a {
   }
 
   .bottle {
+    left: -100px;
+  }
+}
+
+@include media-breakpoint-up(xl) {
+  .bag {
+    left: 900px;
+  }
+
+  .bottle {
     top: 250px;
+  }
+}
+
+@include media-breakpoint-up(xxl) {
+  .bag {
+    top: -100px;
+    left: 1220px;
+  }
+
+  .spects {
+    left: 760px;
+    top: 250px;
+  }
+
+  .book {
+    left: 600px;
+    top: 30px;
+  }
+
+  .bottle {
+    left: -150px;
   }
 }
 
@@ -290,6 +345,16 @@ a {
 
   100% {
     transform: rotateZ(-10deg);
+  }
+}
+
+@keyframes lighthouse {
+  0% {
+    transform: translate3d(1%, 0, 0) rotateZ(1deg);
+  }
+
+  100% {
+    transform: translate3d(-1%, 0, 0) rotateZ(-1deg);
   }
 }
 
@@ -352,5 +417,70 @@ a {
     &:focus {
       outline: none;
     }
+  }
+}
+
+/* Shine */
+
+/* .view {
+    position: absolute;
+
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    margin: 0;
+    padding: 0 10px;
+    color: #444;
+    background: #fff;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    opacity: 0;
+} */
+
+.shine {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0;
+
+  &:hover {
+    cursor: zoom-in;
+
+    + .view {
+      opacity: 1;
+    }
+  }
+}
+
+.shine::before {
+  position: absolute;
+  top: 0;
+  left: -85%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 100%
+  );
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+}
+
+.shine:hover::before {
+  -webkit-animation: shine 0.75s;
+  animation: shine 0.75s;
+}
+
+@keyframes shine {
+  100% {
+    left: 125%;
   }
 }
